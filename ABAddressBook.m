@@ -172,8 +172,8 @@ static void _ExternalChangeCallback( ABAddressBookRef bookRef, CFDictionaryRef i
 
 - (void) _handleExternalChangeCallback
 {
-    if(_delegate && [_delegate respondsToSelector:@selector(addressBookDidChange:)])
-        [_delegate addressBookDidChange: self];
+    if(_delegate && [_delegate respondsToSelector:@selector(wrappedAddressBookDidChange:)])
+        [_delegate wrappedAddressBookDidChange: self];
 	
 	[[NSNotificationCenter defaultCenter] postNotificationName:ABAddressBookDidChangeNotification object:self];
 }

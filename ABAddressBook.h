@@ -105,5 +105,5 @@ enum
 @end
 
 @protocol ABAddressBookDelegate <NSObject>
-- (void) addressBookDidChange: (ABAddressBook *) addressBook;
+- (void) wrappedAddressBookDidChange: (ABAddressBook *) addressBook;
 @end
